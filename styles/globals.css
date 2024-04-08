@@ -1,0 +1,771 @@
+:root {
+  --primary: #2596be;
+  --white: #fff;
+  --black: #000;
+  --secondary: rgb(37, 150, 190);
+  --grey5: #d9d9d9;
+  --grey7: #8c8c8c;
+  --grey8: #595959;
+  --navi: #003c4e;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/fonts/nunito-sans-v12-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('../public/fonts/nunito-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-regular.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-200 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../public/fonts/nunito-sans-v12-latin-200.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-200.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-200.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-200.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-200.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-200.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-300 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../public/fonts/nunito-sans-v12-latin-300.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-300.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-300.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-300.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-300.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-300.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/fonts/nunito-sans-v12-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-regular.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../public/fonts/nunito-sans-v12-latin-italic.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-italic.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-italic.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-italic.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-italic.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-italic.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../public/fonts/nunito-sans-v12-latin-600.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-600.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-600.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-600.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-600.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../public/fonts/nunito-sans-v12-latin-700.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-700.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-700.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-800 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../public/fonts/nunito-sans-v12-latin-800.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-800.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-800.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-800.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-800.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-800.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+/* nunito-sans-900 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../public/fonts/nunito-sans-v12-latin-900.eot');
+  /* IE9 Compat Modes */
+  src: url('../public/fonts/nunito-sans-v12-latin-900.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../public/fonts/nunito-sans-v12-latin-900.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-900.woff') format('woff'),
+    /* Modern Browsers */ url('../public/fonts/nunito-sans-v12-latin-900.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../public/fonts/nunito-sans-v12-latin-900.svg#NunitoSans') format('svg');
+  /* Legacy iOS */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f0f2f6;
+}
+
+.ant-btn-primary {
+  box-shadow: none;
+}
+
+#profile-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  padding: 10px;
+  margin: 0.5rem;
+  display: flex;
+  border-radius: 2px;
+  background: rgba(228, 241, 254, 0.5);
+  justify-content: space-between;
+  line-height: 0.6;
+  border: 1px solid lightgray;
+}
+
+.image {
+  position: relative;
+  width: 70px;
+  bottom: 2rem;
+  cursor: pointer;
+  background-size: cover;
+}
+
+/* .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  transition: all 0.2s linear;
+} */
+
+.role {
+  color: grey;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ant-card .ant-card-body {
+  padding: 12px;
+}
+
+.id-card {
+  width: 300px;
+  height: 450px;
+  background-color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.id-card-header {
+  padding: 10px;
+  width: 100%;
+  background: darkblue;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.id-card-content {
+  padding: 20px;
+}
+
+.id-card-title {
+  font-weight: bold;
+}
+
+.id-card-footer {
+  padding: 10px;
+  width: 100%;
+  background: darkblue;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.id-card-image {
+  padding: 10px 50px;
+}
+
+@media print {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+      Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #fff;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .col-6 {
+    float: left;
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .content .inner {
+    min-height: 50px;
+    width: fit-content;
+    border: none;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid #c2c2c2;
+    border-collapse: collapse;
+  }
+
+  table tr,
+  td {
+    padding: 0;
+    border: none;
+  }
+
+  th,
+  td {
+    border: 1px solid #c2c2c2;
+    text-align: left;
+    padding: 5px;
+  }
+
+  #prescription-section{
+    padding: 0 35px;
+    padding-top: 130px;
+  }
+  .medicine-section {
+    padding-top: 130px;    
+  }
+  #prescription-section{
+    p, th, td{
+      font-size: 12px;
+      line-height: 14.5px;
+    }
+    p{
+      margin-bottom: 0;
+      margin-top: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  #prescription-section span {
+    font-weight: 600;
+    font-size:10.5px;
+  }
+
+  .title-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .patient-detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #prescription-section .patient-detail .group {
+    width: 33.33%;
+  }
+  .group .title {
+    font-weight: 600;
+  }
+  .date {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+  }
+  .date .group {
+    width: initial;
+  }
+
+  .date .group .title {
+    width: inherit;
+  }
+
+  .opd-information .inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .opd-information .inner .date {
+    width: 100%;
+    text-align: right;
+    font-weight: 600;
+  }
+
+  .patient-detail .group .title {
+    width: 90px;
+  }
+
+  .patient-detail .group .seperator {
+    width: 10px;
+  }
+
+  .vitals .inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vitals .inner .title {
+    width: 100%;
+  }
+
+  .vitals .inner .group {
+    width: initial;
+    padding-left: 30px;         
+  }
+  .medicine-section .signature {
+    position: relative;
+  }
+  .medicine-section .signature .signature-field {
+    border-top: 1px solid #000;
+    width: 150px;
+    float: right;
+    margin-top: 60px;
+  }
+  .footer .inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .signature {
+    width: 33.33%;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .signature .img-container{
+    width: 150px;
+    height: 60px;
+    float: right;
+  }
+  
+  .footer .signature .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .footer .signature .signature-field{
+    width: 150px;
+    float: right;
+    border-top: 1px solid #000;
+    padding-top: 2px;
+    text-align: center;
+  }
+}
+
+.widget-flat {
+  --tz-card-spacer-y: 1.5rem;
+  --tz-card-spacer-x: 1.5rem;
+  --tz-card-title-spacer-y: 0.75rem;
+  --tz-card-border-width: var(--tz-theme-card-border-width);
+  --tz-card-border-color: var(--tz-border-color);
+  --tz-card-border-radius: var(--tz-border-radius-sm);
+  --tz-card-box-shadow: var(--tz-box-shadow);
+  --tz-card-inner-border-radius: calc(var(--tz-border-radius-sm) - (var(--tz-theme-card-border-width)));
+  --tz-card-cap-padding-y: 1.125rem;
+  --tz-card-cap-padding-x: 1.5rem;
+  --tz-card-cap-bg: var(--tz-tertiary-bg);
+  --tz-card-bg: var(--tz-secondary-bg);
+  --tz-card-img-overlay-padding: 1.5rem;
+  --tz-card-group-margin: 0.625rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--tz-card-height);
+  color: var(--tz-body-color);
+  word-wrap: break-word;
+  background-color: var(--tz-card-bg);
+  background-clip: border-box;
+  border: var(--tz-card-border-width) solid var(--tz-card-border-color);
+  border-radius: var(--tz-card-border-radius);
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: var(--tz-card-spacer-y) var(--tz-card-spacer-x);
+  color: var(--tz-card-color);
+}
+
+.float-end {
+  float: right !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.my-2 {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.bg-opacity-10 {
+  --tz-bg-opacity: 0.1;
+}
+
+.text-bg-purple {
+  color: #fff !important;
+  background-color: RGBA(113, 108, 176, var(--tz-bg-opacity, 1)) !important;
+}
+
+.text-bg-pink {
+  color: #fff !important;
+  background-color: RGBA(242, 79, 124, var(--tz-bg-opacity, 1)) !important;
+}
+
+.text-bg-info {
+  color: #fff !important;
+  background-color: RGBA(51, 176, 224, var(--tz-bg-opacity, 1)) !important;
+}
+
+.text-bg-primary {
+  color: #fff !important;
+  background-color: RGBA(59, 192, 195, var(--tz-bg-opacity, 1)) !important;
+}
+
+h6 {
+  font-size: 0.74375rem;
+}
+
+h2 {
+  font-size: 1.82rem;
+}
+
+.badge {
+  --tz-badge-padding-x: 0.4em;
+  --tz-badge-padding-y: 0.25em;
+  --tz-badge-font-size: 0.8em;
+  --tz-badge-font-weight: 500;
+  --tz-badge-color: #fff;
+  --tz-badge-border-radius: 0.375rem;
+  display: inline-block;
+  padding: var(--tz-badge-padding-y) var(--tz-badge-padding-x);
+  font-size: var(--tz-badge-font-size);
+  font-weight: var(--tz-badge-font-weight);
+  line-height: 1;
+  color: var(--tz-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--tz-badge-border-radius);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--tz-heading-color);
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.me-1 {
+  margin-right: 0.375rem !important;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card-patient {
+  width: 90%;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card-patient h1 {
+  text-align: center;
+}
+
+.card-patient .additional {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(#0094b6, #0094b6);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card-patient.green .additional {
+  background: linear-gradient(#92bca6, #a2ccb6);
+}
+
+.card-patient .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card-patient .additional .user-card .level,
+.card-patient .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card-patient .additional .user-card .points {
+  top: 85%;
+}
+
+.card-patient .additional .user-card svg {
+  top: 50%;
+}
+
+.card-patient .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card-patient .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card-patient .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card-patient .additional .coords span + span {
+  float: right;
+}
+
+.card-patient .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card-patient .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card-patient .additional .stats i {
+  display: block;
+}
+
+.card-patient .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card-patient .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card-patient .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card-patient .general {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+  margin-left: 30%;
+  margin-top: 50px;
+}
+
+.card-patient .general .more {
+  position: absolute;
+  right: 20px;
+  font-size: 0.9em;
+}
+
+.ant-table-row-selected .ant-table-cell {
+  background: rgb(220, 229, 255) !important;
+}

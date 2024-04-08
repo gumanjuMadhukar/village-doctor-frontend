@@ -1,0 +1,17 @@
+version: '3' 
+services: 
+  hrlabs:
+    image: $APP_IMAGE_NAME
+    hostname: ui-hrlabs
+    command: npm start
+    environment:
+      NEXT_PUBLIC_BASE_URL: https://api-hrlabs.diagonal.solutions
+      NEXT_PUBLIC_S3_URL: https://s3.dev.diagonal.solutions
+
+    ports: 
+      - "3030:3000"
+    logging:
+      driver: loki
+      options:
+        loki-url: "https://loki.diagonal.services/loki/api/v1/push"
+        loki-external-labels: container_name={{.Name}},cluster=prd

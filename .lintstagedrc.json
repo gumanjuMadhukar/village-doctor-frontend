@@ -1,0 +1,4 @@
+{
+  "*": "prettier --config .prettierrc --ignore-path .prettierignore --ignore-unknown -l",
+  "*.ts|tsx": "eslint"
+}

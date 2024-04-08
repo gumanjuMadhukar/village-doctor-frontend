@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Add the following
+node_modules/.bin/lint-staged
+
+
+# If using npm, remove above and uncomment below
+# npm run lint-staged
