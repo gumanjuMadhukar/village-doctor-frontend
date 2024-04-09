@@ -421,7 +421,7 @@ const PatientForm: React.FC = () => {
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item label="Ward / वार्ड" name="ward_no" rules={[{ required: true, message: 'Please enter ward!' }]}>
+          <Form.Item label="Ward / वार्ड" name={permanentAddress ? 'ward_no' : 'c_ward_no'}>
             <Input />
           </Form.Item>
         </Col>
