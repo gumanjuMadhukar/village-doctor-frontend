@@ -203,12 +203,12 @@ const PatientForm: React.FC = () => {
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col span={24} style={{ right: '0' }} className={`profile-img`}>
           <div className="concent">
-            <label style={{ fontSize: '11px', fontWeight: '500' , color:'red' }}>
+            <label style={{ fontSize: '11px', fontWeight: '500', color: 'red' }}>
               *I hereby grant [Your Organizations Name] permission to use my photographs on its website and
               associated web platforms.{' '}
             </label>
             <br></br>
-            <label htmlFor="" style={{ fontSize: '11px', fontWeight: '500', color:'red' }}>
+            <label htmlFor="" style={{ fontSize: '11px', fontWeight: '500', color: 'red' }}>
               {' '}
               *I hereby consent to participate voluntarily in the research study titled [Title of the Research Study]
               conducted by [Researchers Name] from [Institutions Name].
