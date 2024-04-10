@@ -173,7 +173,7 @@ const AddDoctorModal = ({ isModalOpen, handleCancel }: Props) => {
           </Col>
 
           <Col lg={11} xs={24} md={11}>
-            <Form.Item label="Signature" name="image">
+            <Form.Item label="Signature" name="image" >
               <Upload onChange={handleChange} accept="image/jpg, image/jpeg, image/png" action="/api/noop">
                 <StyleButton size="large" className="button-image-upload" icon={<UploadOutlined />}>
                   Upload

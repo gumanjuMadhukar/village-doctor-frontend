@@ -55,7 +55,7 @@ const doctorListColumns: ColumnsType<any> = [
     render: (_, record) => {
       return (
         <div className="semi-bold">
-          {record.first_name} {record.last_name}
+          {record.salutation}.{record.first_name} {record.last_name}
         </div>
       );
     }
