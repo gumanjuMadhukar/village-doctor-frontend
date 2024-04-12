@@ -59,6 +59,11 @@ export const getCurrentMonth = (): number => {
   return moment().month() + 1;
 };
 
+export const getCurrentMonthString = () : string => {
+  const monthNumber = moment().month() + 1;
+  return monthNumber.toString().padStart(2, '0');
+}
+
 export const DateFormatMonthNameYear = (date: any): string => {
   if (!date) return date;
   return moment(date).format('MMMM YYYY');
@@ -77,6 +82,7 @@ export const DateFormatDay = (date: any): string => {
 export const DateFormaMonthHalfNameYear = (date: any): string => {
   if (!date) return date;
   return moment(date).format('MMM YYYY');
+  
 };
 
 export const DateFormaMonthFullNameYear = (date: any): string => {

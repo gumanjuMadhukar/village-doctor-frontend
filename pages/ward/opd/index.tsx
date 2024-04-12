@@ -25,14 +25,14 @@ import { DEFAULT_PAGE_SIZE, INITIAL_CURRENT_PAGE } from "constants/common";
 import { MONTH_SELECT, rangePresets } from "constants/schema";
 import dayjs, { Dayjs } from "dayjs";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { PatientListColumns } from "shared/patient-table-column";
 import styled from "styled-components";
 import { PageHeaderWrapper } from "styles/authCSS";
 import { SearchBarContentRedesign } from "styles/search";
 import { TableBodyContainer } from "styles/styled/PageHeader";
-import { getCurrentMonth, getCurrentYear } from "utils/DateFormat";
+import { getCurrentMonth, getCurrentMonthString,getCurrentYear } from "utils/DateFormat";
 
 const HeaderItems = [
   {
@@ -68,7 +68,7 @@ const Opd = () => {
   const [startDate, setStartDate] = useState<Date | null | string>();
   const [endDate, setEndDate] = useState<Date | null | string>();
   const [dateRange, setDateRange] = useState<boolean>(false);
-  const [month, setMonth] = useState<any>(getCurrentMonth());
+  const [month, setMonth] = useState<any>(getCurrentMonthString());
   const [patientName, setPatientName] = useState<any>(getCurrentMonth());
   const [year, setYear] = useState<any>(null);
   const [dateRangeValue, setDateRangeValue] = useState<any>([]);
@@ -187,6 +187,11 @@ const Opd = () => {
     setOpenLabUploadModal(false);
   };
   console.log(filterParams, "check")
+  useEffect(() => {
+    let monthString = getCurrentMonthString();
+     console.log(monthString, 'monthString');
+  }, [])
+  
   return (
     <div>
       <PageHeaderWrapper>
@@ -200,13 +205,12 @@ const Opd = () => {
       </PageHeaderWrapper>
       <SearchBarContentRedesign>
         <Collapse
-          defaultActiveKey={[""]}
+          defaultActiveKey={["1"]}
           style={{ padding: "5px 25px" }}
           expandIcon={() => <FilterOutlined />}
         >
           <Panel header="Filter" key="1">
             <Form>
-            
               <Form.Item label="" name="name_filter">
                 <Input
                   placeholder="Patient's Name"
@@ -234,9 +238,9 @@ const Opd = () => {
               {/* hidden  form end*/}
               <Form.Item>
                 <Select
-                  value={month || getCurrentMonth()}
+                  value={month}
                   options={MONTH_SELECT}
-                  onChange={(value) => setMonth(value)}
+                  onChange={(value) => setMonth(value)}      
                   disabled={dateRangeValue.length > 0}
                   placeholder="Select Month"
                 />

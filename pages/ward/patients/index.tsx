@@ -12,7 +12,7 @@ import { WardOPDListColumns } from 'shared/patient-table-column';
 import { PageHeaderWrapper } from 'styles/authCSS';
 import { SearchBarContent, SelectDateRange } from 'styles/search';
 import { SearchBar, TableBodyContainer } from 'styles/styled/PageHeader';
-import { getCurrentMonth, getCurrentYear } from 'utils/DateFormat';
+import { getCurrentMonth, getCurrentMonthString, getCurrentYear } from 'utils/DateFormat';
 
 const HeaderItems = [
   {
@@ -53,7 +53,7 @@ const HeaderItems = [
 // `;
 
 // const SearchBarContentRedisgn = styled.div`
-//   display: grid;
+//   display: grid;      
 //   grid-template-columns: repeat(6, 1fr);
 //   @media (max-width: 768px) {
 //     grid-template-columns: auto auto;
@@ -82,7 +82,7 @@ const Patients = () => {
   const [startDate, setStartDate] = useState<Date | null | string>();
   const [endDate, setEndDate] = useState<Date | null | string>();
   const [dateRange, setDateRange] = useState<boolean>(false);
-  const [month, setMonth] = useState<any>(getCurrentMonth());
+  const [month, setMonth] = useState<any>(getCurrentMonthString());
   const [year, setYear] = useState<any>(null);
   const [dateRangeValue, setDateRangeValue] = useState<any>([]);
   const { RangePicker } = DatePicker;

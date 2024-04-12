@@ -11,7 +11,7 @@ import { AdminOPDListColumns } from 'shared/patient-table-column';
 import styled from 'styled-components';
 import { PageHeaderWrapper } from 'styles/authCSS';
 import { SearchBar, TableBodyContainer } from 'styles/styled/PageHeader';
-import { getCurrentMonth, getCurrentYear } from 'utils/DateFormat';
+import { getCurrentMonth, getCurrentMonthString, getCurrentYear } from 'utils/DateFormat';
 
 const HeaderItems = [
   {
@@ -197,7 +197,7 @@ const Patients = () => {
         <Form>
           <SearchBarContentRedisgn>
             <Select
-              value={month || getCurrentMonth()}
+              value={month || getCurrentMonthString()}
               options={MONTH_SELECT}
               onChange={value => setMonth(value)}
               disabled={dateRangeValue.length > 0}
